@@ -1,12 +1,20 @@
-//import react into the bundle
-import React from "react";
-import ReactDOM from "react-dom";
 
-// include your styles into the webpack bundle
-import "../styles/index.css";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Home from './component/home';
+import '../styles/index.css';
 
-//import your own components
-import Home from "./component/home.jsx";
+let seconds = 0;
 
-//render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+const renderApp = () => {
+  const rootElement = document.getElementById('root');
+  if (rootElement) {
+    ReactDOM.render(<Home seconds={seconds} />, rootElement);
+    seconds += 1;
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderApp();
+  setInterval(renderApp, 1000);
+});
