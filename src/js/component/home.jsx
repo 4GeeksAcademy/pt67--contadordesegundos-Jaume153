@@ -1,14 +1,12 @@
-import React from 'react';
-import SecondsCounter from './secondscounter';
+import React from "react";
+import SecondsCounter from "./secondscounter.jsx";
 
 const Home = ({ seconds }) => {
-  return (
-    <div className="home-container">
-      <h1>Welcome to the Home Page!</h1>
-      <p>This is a simple React component.</p>
-      <SecondsCounter seconds={seconds} />
-    </div>
-  );
+    return (
+        <div className="text-center mt-5">
+            <SecondsCounter seconds={seconds} />
+        </div>
+    );
 };
 
 export default Home;

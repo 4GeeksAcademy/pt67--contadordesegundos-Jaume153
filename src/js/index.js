@@ -1,20 +1,14 @@
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Home from './component/home';
-import '../styles/index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "../styles/index.css";
+import Home from "./component/home.jsx";
 
 let seconds = 0;
 
 const renderApp = () => {
-  const rootElement = document.getElementById('root');
-  if (rootElement) {
-    ReactDOM.render(<Home seconds={seconds} />, rootElement);
-    seconds += 1;
-  }
+    ReactDOM.render(<Home seconds={seconds} />, document.getElementById("app"));
+    seconds++;
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderApp();
-  setInterval(renderApp, 1000);
-});
+setInterval(renderApp, 1000);
