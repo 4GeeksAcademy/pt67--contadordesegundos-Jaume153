@@ -1,3 +1,4 @@
+
 .d-flex {
   display: flex;
 }
@@ -7,11 +8,33 @@
 }
 
 .digit {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;  
   font-size: 5rem;
   margin: 0 5px;
 }
 
-.fa-regular.fa-clock {
+.counter-container {
+  margin: 0 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+
+@media (max-width: 768px) {
+  .digit {
+    font-size: 3rem;
+  }
+  
+  .counter-container {
+      padding: 10px;
+  }
+}
+
+.far.fa-regular.fa-clock {
   font-size: 5rem;
   margin-right: 10px;
 }

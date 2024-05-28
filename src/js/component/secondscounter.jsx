@@ -8,9 +8,9 @@ const SecondsCounter = ({ seconds }) => {
     const digits = formatTime(seconds);
 
     return (
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center bg-dark counter-container">
             <div className="digit">
-                <i className="fa-regular fa-clock"></i>
+            <i className="far fa-clock"></i>
             </div>
             {digits.map((digit, index) => (
                 <div className="digit" key={index}>{digit}</div>
